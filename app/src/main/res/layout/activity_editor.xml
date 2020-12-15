@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        tools:context=".EditorActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/details_of_book_label_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/details_of_new_book_label"
+            android:textSize="32sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:id="@+id/tmpimage"
+            android:background="#F4D6CC"
+            android:src="@drawable/frame"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/details_of_book_label_tv"
+            app:layout_constraintTop_toBottomOf="@+id/details_of_book_label_tv" />
+
+
+                <TextView
+                    android:id="@+id/book_name_label_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="Book name"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tmpimage" />
+
+                <EditText
+                    android:id="@+id/book_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:hint="Witcher: Blood of elves"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@+id/book_name_label_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/book_name_label_tv" />
+
+                <TextView
+                    android:id="@+id/book_author_label_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Book author"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/book_name_et" />
+
+                <EditText
+                    android:id="@+id/book_author_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:hint="Anjei Sapkovski"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@+id/book_author_label_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/book_author_label_tv"
+                    />
+
+                <TextView
+                    android:id="@+id/publish_year_label_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Publish year"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/book_author_et" />
+
+                <!--        <EditText-->
+        <!--            android:id="@+id/publish_year_et"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            android:hint="1499"-->
+        <!--            android:inputType="number"-->
+        <!--            android:textSize="24sp"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/publish_year_label_tv"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/publish_year_label_tv"-->
+        <!--            tools:ignore="HardcodedText" />-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/publish_year_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/publish_year_label_tv"
+            app:layout_constraintTop_toBottomOf="@+id/publish_year_label_tv"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/publish_year_textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="1499"
+                android:inputType="number"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/publish_year_label_tv"
+                app:layout_constraintTop_toBottomOf="@+id/publish_year_label_tv"
+                tools:ignore="HardcodedText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/page_count_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Page count"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/publish_year_textInputLayout" />
+
+        <EditText
+            android:id="@+id/page_count_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="123..."
+            android:textSize="24sp"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="@+id/page_count_label_tv"
+            app:layout_constraintTop_toBottomOf="@+id/page_count_label_tv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/genre_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Book genre"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/page_count_et" />
+
+        <EditText
+            android:id="@+id/genre_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Fantasy"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/page_count_label_tv"
+            app:layout_constraintTop_toBottomOf="@+id/genre_label_tv"
+            />
+
+        <TextView
+            android:id="@+id/add_photo_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add photos"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/tmpimage"
+            app:layout_constraintStart_toStartOf="@+id/tmpimage"
+            app:layout_constraintBottom_toBottomOf="@id/tmpimage"
+            app:layout_constraintTop_toTopOf="@id/tmpimage"
+            tools:layout_editor_absoluteY="124dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

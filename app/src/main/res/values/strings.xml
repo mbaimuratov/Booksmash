@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Booksmash</string>
+    <string name="current_book">Current Book</string>
+    <string name="future_books">Future Books</string>
+    <string name="past_books">Past Books</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="pages_today_label">Pages Today:</string>
+    <string name="time_today_label">Time Today:</string>
+    <string name="see_more_label">Tap to see more...</string>
+    <string name="go_to_stopwatch_label">stopwatch</string>
+    <string name="add_note_label">Add a Note</string>
+    <string name="search_similar_label">Search for similar books</string>
+    <string name="start_stopwatch_label">Start</string>
+    <string name="stop_stopwatch_label">Stop</string>
+    <string name="pause_stopwatch_label">Pause</string>
+    <string name="pages_dialog_question">How many pages have you read?</string>
+    <string name="done_label">Done!</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="unknown_author_label">Unknown author</string>
+    <string name="insert_dummy_data">Insert Dummy Data</string>
+    <string name="delete_all_books">Delete all books</string>
+    <string name="empty_view_absent_current_book">You have no current book...</string>
+    <string name="empty_view_subtitle_text">Get started by adding a new book</string>
+    <string name="adds_new_book">Adds new book</string>
+    <string name="add_book">Add book</string>
+    <string name="details_of_new_book_label">Details of a new book</string>
+    <string name="add_photo">Add photo</string>
+    <string name="see_more_details">See more details...</string>
+    <string name="timer_image_content_desc">timer image</string>
+</resources>

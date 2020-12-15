@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_add_current_book"
+        android:title="@string/add_book"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_add_white_48"
+        />
+
+    <item
+        android:id="@+id/action_insert_dummy_current"
+        android:title="Insert dummy"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/action_move_to_past"
+        android:title="Move to past books"
+        app:showAsAction="never"/>
+</menu>

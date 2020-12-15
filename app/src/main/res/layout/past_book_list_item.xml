@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/list_item_padding_vertical"
+    android:paddingLeft="@dimen/list_item_padding_horizontal"
+    android:paddingRight="@dimen/list_item_padding_horizontal"
+    android:paddingTop="@dimen/list_item_padding_vertical">
+
+    <ImageView
+        android:id="@+id/past_book_cover_image_view"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@android:drawable/ic_media_pause"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/past_book_book_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="Dandelion Wine"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/past_book_cover_image_view"
+        app:layout_constraintTop_toTopOf="@+id/past_book_cover_image_view" />
+
+    <TextView
+        android:id="@+id/past_book_author_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/past_book_book_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/past_book_book_name_tv"
+        tools:text="Ray Bradbury" />
+
+    <RatingBar
+        android:id="@+id/past_book_rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="0.1"
+        app:layout_constraintStart_toStartOf="@+id/past_book_author_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/past_book_author_name_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

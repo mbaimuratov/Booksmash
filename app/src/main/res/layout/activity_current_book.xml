@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/current_book_constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="409dp"
+            android:layout_height="255dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/progressbar_constrainLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- ProgressBar that represents a total of 100% -->
+                <ProgressBar
+                    android:id="@+id/background_pb"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@layout/stats_full"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- ProgressBar that represents a chart slice, where "android:progress" is the % value of the slice -->
+                <ProgressBar
+                    android:id="@+id/stats_pb"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progressDrawable="@layout/stats_progress"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:progress="50" />
+
+                <TextView
+                    android:id="@+id/percent_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="50%" />
+
+                <!-- The text that goes in a center of the chart -->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/pages_today_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/pages_today_label"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/progressbar_constrainLayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pages_today_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="32sp"
+                app:layout_constraintStart_toStartOf="@+id/pages_today_label_tv"
+                app:layout_constraintTop_toBottomOf="@+id/pages_today_label_tv"
+                tools:text="150" />
+
+            <TextView
+                android:id="@+id/time_today_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/time_today_label"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/progressbar_constrainLayout"
+                app:layout_constraintTop_toBottomOf="@+id/pages_today_count_tv" />
+
+            <TextView
+                android:id="@+id/time_today_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="32sp"
+                app:layout_constraintStart_toStartOf="@+id/time_today_label_tv"
+                app:layout_constraintTop_toBottomOf="@+id/time_today_label_tv"
+                tools:text="00:40:15" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/current_book_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            tools:text="Dandelion Wine" />
+
+        <TextView
+            android:id="@+id/current_book_author_and_year_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/current_book_name_tv"
+            app:layout_constraintTop_toBottomOf="@+id/current_book_name_tv"
+            android:textSize="20sp"
+            tools:text="Ray Bradbury, 1957" />
+
+        <LinearLayout
+            android:id="@+id/start_timer_linearLayout"
+            style="@style/currentBookActivitiesStyle"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_book_author_and_year_tv">
+
+            <ImageView
+                style="@style/currentBookActivitiesIconStyle"
+                android:contentDescription="@string/timer_image_content_desc"
+                android:src="@drawable/baseline_timer_white_48" />
+
+            <TextView
+                style="@style/currentBookActivitiesLabelStyle"
+                android:text="@string/go_to_stopwatch_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_note_linearLayout"
+            style="@style/currentBookActivitiesStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/start_timer_linearLayout"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                style="@style/currentBookActivitiesIconStyle"
+                android:src="@drawable/baseline_bookmark_border_white_48" />
+
+            <TextView
+                style="@style/currentBookActivitiesLabelStyle"
+                android:text="@string/add_note_label"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_similar_linearLayout"
+            style="@style/currentBookActivitiesStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_note_linearLayout"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:src="@drawable/baseline_search_white_48"
+                style="@style/currentBookActivitiesIconStyle" />
+
+            <TextView
+                android:text="@string/search_similar_label"
+                style="@style/currentBookActivitiesLabelStyle" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/empty_current_book_tv"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="You have no current book"
+        android:visibility="invisible"/>
+
+</FrameLayout>
